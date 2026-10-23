@@ -330,7 +330,6 @@ html.light{--bg:#F3F2EE;--panel:#E8E6E0;--fg:#111114;--muted:#5E5E66;--line:rgba
 html.theming,html.theming *,html.theming *::before,html.theming *::after{transition:background-color .6s ease,color .6s ease,border-color .6s ease,fill .6s ease,box-shadow .6s ease!important}
 html.light #loader{background:var(--bg)}
 html.light #loader .bar{background:var(--fg)}
-html.light .pill.white{background:var(--fg);color:var(--bg);box-shadow:0 10px 30px rgba(17,17,20,.22)}
 html.light .pill.ghost{background:rgba(243,242,238,.6);border-color:rgba(17,17,20,.2);color:var(--fg)}
 html.light .pill.ghost:hover{background:rgba(17,17,20,.08)}
 html.light #world{background:var(--bg)}
@@ -341,23 +340,13 @@ html.light .row h3{color:var(--ink2)}
 html.light .row:hover{background:rgba(17,17,20,.05)}
 html.light .row:hover h3{color:var(--fg)}
 html.light .tag{border-color:rgba(17,17,20,.18);color:var(--muted)}
-html.light .tag.c{color:var(--fg)!important}
 html.light .statement .txt{color:var(--ink2)}
 html.light .statement .txt strong{color:var(--fg)}
-html.light .portal-wrap{filter:drop-shadow(0 0 14px rgba(140,140,150,.55)) drop-shadow(0 20px 50px rgba(17,17,20,.25));animation-name:breatheL}
-@keyframes breatheL{50%{filter:drop-shadow(0 0 22px rgba(140,140,150,.75)) drop-shadow(0 24px 60px rgba(17,17,20,.3))}}
-html.light .portal-photo{background:radial-gradient(circle at 50% 40%,#2A2A30,#111114 70%)}
 html.light .founder .role{color:var(--muted)}
 html.light .founder .bio{color:var(--ink2)}
 html.light .founder .bio p.lead{color:var(--fg)}
 html.light .chips span{border-color:rgba(17,17,20,.18);color:var(--fg)}
 html.light .expertise ul{color:var(--ink2)}
-html.light .step p{color:var(--ink2)}
-html.light .step:nth-child(1){--tint:#EAD9D6!important}
-html.light .step:nth-child(2){--tint:#DCE5D8!important}
-html.light .step:nth-child(3){--tint:#D6E1E8!important}
-html.light .step:nth-child(4){--tint:#DEDBEC!important}
-html.light .step:nth-child(5){--tint:#ECE2CF!important}
 html.light .marquee .track{color:rgba(17,17,20,.28)}
 html.light .marquee .track span:nth-child(odd){color:var(--fg)}
 html.light .foot .mid p{color:var(--fg)!important}
@@ -367,27 +356,12 @@ html.light .nextbar svg.edge path{fill:var(--bg)}
 html.light .nextbar .small{color:rgba(243,242,238,.65)!important}
 html.light .nextbar .go{color:rgba(243,242,238,.75)}
 html.light .nextbar .go b{background:var(--bg);color:var(--fg)}
-/* detail card in light */
-html.light #detail .shade{background:linear-gradient(90deg,rgba(243,242,238,.92) 0%,rgba(243,242,238,.55) 42%,rgba(243,242,238,0) 66%)}
-html.light .dcard{background:linear-gradient(160deg,rgba(252,252,250,.9),rgba(243,242,238,.92));border-color:rgba(17,17,20,.12);box-shadow:0 50px 120px rgba(17,17,20,.22),inset 0 1px 0 rgba(255,255,255,.7);color:var(--fg)}
-html.light .dbar{border-color:rgba(17,17,20,.08)}
-html.light .dfoot{background:rgba(243,242,238,.7);border-color:rgba(17,17,20,.08)}
-html.light .dclose,html.light .dnav button{border-color:rgba(17,17,20,.22);color:var(--fg)}
-html.light .dclose:hover,html.light .dnav button:hover{background:rgba(17,17,20,.07)}
-html.light .dbig{-webkit-text-stroke-color:rgba(17,17,20,.1)}
-html.light .dcard{--acc:var(--accL)}
-html.light .dtag,html.light .dinc i,html.light .dget svg{filter:none}
-html.light .dcard .lead,html.light .dwhy{color:var(--ink2)}
-html.light .dsec>h3::after{background:linear-gradient(90deg,rgba(17,17,20,.15),transparent)}
-html.light .dinc>div{border-color:rgba(17,17,20,.1);background:rgba(255,255,255,.45)}
-html.light .dinc>div:hover{background:rgba(255,255,255,.75)}
-html.light .dinc b,html.light .dsteps b{color:var(--fg)}
-html.light .dinc span,html.light .dsteps span,html.light .dfaq p{color:var(--muted)}
-html.light .dfor span{color:var(--fg)}
-html.light .dget li{color:var(--ink2)}
-html.light .dsteps em{background:var(--bg);color:var(--fg)}
-html.light .dfaq details{border-color:rgba(17,17,20,.1)}
-html.light .dfaq summary{color:var(--fg)}
+/* components keep their own dark colours in light theme */
+html.light .step,html.light .dcard,html.light .portal-photo{--fg:#F4F4F2;--muted:#8E8E93;--line:#1E1E22;--panel:#0C0C0E;--ink2:#cfcfd4;color:var(--fg)}
+html.light .step{box-shadow:0 20px 50px rgba(17,17,20,.12)}
+html.light .fx-start b{box-shadow:0 0 0 1px rgba(17,17,20,.15)}
+html.light .cx-btn{box-shadow:0 12px 36px rgba(17,17,20,.16),0 0 0 1px rgba(17,17,20,.08)}
+html.light .brand img,html.light .fx-logo img,html.light #loader img{filter:drop-shadow(0 1px 1.5px rgba(17,17,20,.55)) drop-shadow(0 0 6px rgba(17,17,20,.15))}
 /* theme button */
 .tbtn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;color:var(--fg);position:relative;overflow:hidden;transition:background .3s,transform .4s;flex:0 0 auto}
 .tbtn:hover{background:rgba(255,255,255,.1);transform:rotate(-20deg)}
@@ -403,10 +377,6 @@ html.light .tbtn .moon{transform:translateY(-130%) rotate(90deg);opacity:0}
 html.light .xlink:hover,html.light .xlink:focus-visible{color:var(--fg)}
 html.light .chips button{border-color:rgba(17,17,20,.18);color:var(--fg)}
 html.light .chips button:hover{background:rgba(17,17,20,.06);border-color:rgba(17,17,20,.35)}
-html.light .step .more{color:var(--fg)}
-html.light #pdetail .shade{background:rgba(243,242,238,.62)}
-html.light .pflow button{background:rgba(17,17,20,.12)}
-html.light .pflow button.on{background:var(--acc)}
 html.light .cx-portal{animation:none;filter:drop-shadow(0 0 1px rgba(17,17,20,.3)) drop-shadow(0 24px 70px rgba(17,17,20,.16))}
 html.light .cx-shape{background:radial-gradient(circle at 50% 38%,#FFFFFF,#E7E5DF 70%)}
 html.light .cx h2 .l1{color:var(--ink2)}
@@ -417,8 +387,6 @@ html.light .cx-say input::placeholder{color:#9a9aa2}
 html.light .cx-say input:focus,html.light .cx-say select:focus{border-bottom-color:var(--fg)}
 html.light .cx-say select option{background:#fff;color:var(--fg)}
 html.light .selw::after{border-color:#555}
-html.light .cx-btn{background:var(--fg);color:var(--bg);box-shadow:0 14px 40px rgba(17,17,20,.2)}
-html.light .cx-btn b{background:var(--bg);color:var(--fg)}
 html.light .cx-alt:hover{color:var(--fg)}
 html.light .cx-links a{color:var(--fg)}
 html.light .cx-links svg{border-color:rgba(17,17,20,.18)}
@@ -427,10 +395,6 @@ html.light .cx-btn:focus-visible,html.light .cx-alt:focus-visible,html.light .cx
 html.light .fx{background:radial-gradient(80% 60% at 50% 120%,rgba(17,17,20,.05),transparent 70%),var(--bg)}
 html.light .fx-big em{background:linear-gradient(180deg,#111114,#6b6b74);-webkit-background-clip:text;background-clip:text}
 html.light .fx-start{border-color:rgba(17,17,20,.22)}
-html.light .fx-start::before{background:var(--fg)}
-html.light .fx-start b{background:var(--fg);color:var(--bg)}
-html.light .fx-start:hover{color:var(--bg);border-color:var(--fg)}
-html.light .fx-start:hover b{background:var(--bg);color:var(--fg)}
 html.light .fx-brand p,html.light .fx-cols nav a,html.light .fx-touch>a,html.light .fx-top-link{color:var(--ink2)}
 html.light .fx-cols nav a:hover,html.light .fx-touch>a:hover,html.light .fx-top-link:hover{color:var(--fg)}
 html.light .fx-soc a,html.light .fx-top-link b{border-color:rgba(17,17,20,.18)}
@@ -1055,8 +1019,6 @@ var LOGO_NAVY='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmc
 THEME.v=THEME.t;
 function applyLogos(light){var imgs=document.querySelectorAll('.brand img,#loader img,.fx-logo img');
   if(!LOGO_SILVER&&imgs[0])LOGO_SILVER=imgs[0].getAttribute('src');
-  [].forEach.call(imgs,function(im){im.setAttribute('src',light?LOGO_NAVY:LOGO_SILVER);});
-  var f=$('favi');if(f){f.setAttribute('type',light?'image/svg+xml':'image/png');f.setAttribute('href',light?LOGO_NAVY:LOGO_SILVER);}
   $('themeBtn').setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');}
 function setTheme(light,animate){var h=document.documentElement;
   if(animate&&!reduce){h.classList.add('theming');clearTimeout(setTheme._t);setTheme._t=setTimeout(function(){h.classList.remove('theming');},700);}
@@ -1137,7 +1099,7 @@ $('themeBtn').addEventListener('click',function(){setTheme(!document.documentEle
   size(); addEventListener('resize',size);
 
   var A=new THREE.Vector3(0,1.9,10.5), At=new THREE.Vector3(0,2.05,0), B=new THREE.Vector3(GAL.x,1.6,GAL.z+.0);
-  var bgc=new THREE.Color(),BG_D=new THREE.Color(0x000000),BG_L=new THREE.Color(0xF3F2EE),DISC_D=new THREE.Color(0x000000),DISC_L=new THREE.Color(0x111114),DUST_D=new THREE.Color(0xffffff),DUST_L=new THREE.Color(0x111114);
+  var bgc=new THREE.Color(),BG_D=new THREE.Color(0x000000),BG_L=new THREE.Color(0xF3F2EE),DISC_D=new THREE.Color(0x000000),DISC_L=new THREE.Color(0xE4E2DC),DUST_D=new THREE.Color(0xffffff),DUST_L=new THREE.Color(0x111114);
   var fp=new THREE.Vector3(), fl=new THREE.Vector3(), p=new THREE.Vector3(), look=new THREE.Vector3(), tmp=new THREE.Vector3(), clock=new THREE.Clock(), sS=0;
   function frame(){
     var t=clock.getElapsedTime(); uni.uT.value=t;
@@ -1146,7 +1108,7 @@ $('themeBtn').addEventListener('click',function(){setTheme(!document.documentEle
     disc.material.color.copy(DISC_D).lerp(DISC_L,L);
     dust.material.color.copy(DUST_D).lerp(DUST_L,L); dust.material.opacity=.55-.25*L;
     var lm=L>.5; if(lm!==THEME.mode){THEME.mode=lm;
-      glow.material.blending=lm?THREE.NormalBlending:THREE.AdditiveBlending; glow.material.color.set(lm?0xBDB8AE:0xffffff); glow.material.needsUpdate=true;
+      glow.material.blending=lm?THREE.NormalBlending:THREE.AdditiveBlending; glow.material.color.set(lm?0x8E8E96:0xffffff); glow.material.needsUpdate=true;
       panels.forEach(function(o){o.edge.material.blending=lm?THREE.NormalBlending:THREE.AdditiveBlending;o.edge.material.needsUpdate=true;});}
     sS+=(S-sS)*(reduce?1:.08); mx+=(tx-mx)*.05; my+=(ty-my)*.05;
     var s=sS, fly=smooth(HERO_END,FLY_END,s);
