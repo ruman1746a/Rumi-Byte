@@ -401,6 +401,45 @@ html.light .fx-soc a,html.light .fx-top-link b{border-color:rgba(17,17,20,.18)}
 html.light .fx-soc a:hover,html.light .fx-top-link:hover b{background:var(--fg);color:var(--bg)}
 html.light .fx-word span{background:radial-gradient(260px 200px at var(--mx) var(--my),rgba(17,17,20,.95),rgba(60,60,68,.5) 35%,transparent 70%),linear-gradient(180deg,rgba(17,17,20,.12),rgba(17,17,20,.03) 80%);-webkit-background-clip:text;background-clip:text}
 
+
+/* about v2 */
+.ab{padding-block:clamp(90px,11vw,150px)}
+.ab-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.ab-kick{display:inline-flex;align-items:center;gap:10px;color:var(--fg)}
+.ab-kick i{width:6px;height:6px;border-radius:50%;background:var(--fg)}
+.ab-lead{margin:clamp(36px,5vw,64px) 0 0;max-width:22ch;font-family:var(--display);font-weight:400;font-size:clamp(32px,4.8vw,68px);line-height:1.08;letter-spacing:-.03em;color:var(--fg)}
+.ab-lead{max-width:none}
+.ab-lead .w{transition:opacity .25s linear}
+.ab-lead em{font-style:normal;font-weight:700;background:linear-gradient(180deg,#fff,#9a9da5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ab-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);margin-top:clamp(56px,7vw,96px);align-items:start}
+.ab-copy{display:flex;flex-direction:column;gap:18px;max-width:46ch;color:#c3c3c9;font-size:17px;line-height:1.65}
+.ab-copy p{margin:0}
+.ab-link{display:inline-flex;align-items:center;gap:12px;margin-top:10px;color:var(--fg);font-size:15px;width:max-content;border-bottom:1px solid var(--line);padding-bottom:6px;transition:gap .3s,border-color .3s}
+.ab-link:hover{gap:18px;border-color:var(--fg)}
+.ab-link:focus-visible{outline:2px solid var(--fg);outline-offset:4px}
+.ab-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ab-card{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:18px;border:1px solid rgba(255,255,255,.09);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.012));overflow:hidden;transition:border-color .35s,transform .35s;color:#F4F4F2}
+.ab-card::before{content:"";position:absolute;inset:0;background:radial-gradient(220px 160px at var(--x,30%) var(--y,0%),rgba(255,231,204,.12),transparent 70%);opacity:0;transition:opacity .35s;pointer-events:none}
+.ab-card:hover{border-color:rgba(255,255,255,.22);transform:translateY(-3px)}
+.ab-card:hover::before{opacity:1}
+.ab-card .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);margin-bottom:8px}
+.ab-card svg{width:24px;height:24px}
+.ab-card b{font-weight:500;font-size:18px}
+.ab-card>span:last-child{font-size:14px;line-height:1.55;color:#a9a9b0}
+.ab-zones{margin-top:clamp(56px,7vw,90px);padding-top:22px;border-top:1px solid var(--line)}
+.ab-zl{display:block;margin-bottom:18px}
+.ab-zrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.ab-z{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ab-z b{font-family:var(--display);font-weight:300;font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--fg)}
+.ab-z span{font-size:13px;color:var(--muted)}
+.ab-z.home b{font-weight:600}
+.ab-z.home span::after{content:" · Studio";color:var(--fg)}
+@media (max-width:900px){.ab-grid{grid-template-columns:minmax(0,1fr)}.ab-zrow{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}}
+@media (max-width:520px){.ab-cards{grid-template-columns:minmax(0,1fr)}.ab-zrow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+html.light .ab-lead em{background:linear-gradient(180deg,#111114,#6b6b74);-webkit-background-clip:text;background-clip:text}
+html.light .ab-copy{color:var(--ink2)}
+html.light .ab-card{background:linear-gradient(160deg,#18181c,#0c0c0e);border-color:rgba(17,17,20,.2);box-shadow:0 20px 50px rgba(17,17,20,.12)}
+
 /* liquid name */
 .liquid{overflow:hidden;padding-block:clamp(40px,6vw,80px)}
 .liquid svg{display:block;width:100%;height:auto}
@@ -565,14 +604,28 @@ html.light .fx-word span{background:radial-gradient(260px 200px at var(--mx) var
       <div class="rows" id="rows"></div>
     </section>
 
-    <section id="about" class="gut">
-      <div class="statement">
-        <h2>We are a design and tech studio</h2>
-        <div class="txt">
-          <p><strong>Rumi Byte builds brands that look sharp and websites that feel alive.</strong> From the first logo sketch to the last ad report, we handle the whole journey.</p>
-          <p>We cover the identity, the user experience, the website, and then the ads and content that bring people to it. Because design, development and marketing sit with one team, nothing gets lost between them.</p>
-          <p>Every project gets the same care: clear communication, honest timelines and work we are proud to put our name on.</p>
+    <section id="about" class="gut ab">
+      <div class="ab-top">
+        <span class="small ab-kick"><i aria-hidden="true"></i>About Rumi Byte</span>
+        <span class="small">Est. 2026 · Remote studio</span>
+      </div>
+      <p class="ab-lead" id="abLead">Rumi Byte is a design and technology studio. We help ambitious businesses <em>look world-class</em>, launch websites that <em>work as hard as they do</em>, and reach the people who matter, wherever they are in the world.</p>
+      <div class="ab-grid">
+        <div class="ab-copy">
+          <p>Most businesses juggle a designer, a developer and a marketer who never talk to each other. We bring all three under one roof, so your brand, website and campaigns are planned together and speak with one voice.</p>
+          <p>We work remotely with clients across time zones, communicate in clear English, and keep every project organised from the first call to launch day and beyond.</p>
+          <a class="ab-link" href="#process">See how we work <b aria-hidden="true">→</b></a>
         </div>
+        <ul class="ab-cards">
+          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="16" r="7.5"/><circle cx="20" cy="16" r="7.5"/></svg></span><b>One team, end to end</b><span>Brand, website and marketing from one studio, so nothing gets lost in hand-offs.</span></li>
+          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 24 13 16l5 4 9-11"/><path d="M20 9h7v7"/></svg></span><b>Designed for results</b><span>Every decision has a purpose: more trust, more enquiries and more sales.</span></li>
+          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 8h20v13H14l-6 5v-5H6Z"/><path d="M11 13h10M11 17h6"/></svg></span><b>Clear communication</b><span>Simple plans, regular updates and honest timelines. You always know what's next.</span></li>
+          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3.2 3.2 4.6 7 4.6 11s-1.4 7.8-4.6 11c-3.2-3.2-4.6-7-4.6-11S12.8 8.2 16 5Z"/></svg></span><b>Global by design</b><span>Built to work with clients worldwide, wherever your business is based.</span></li>
+        </ul>
+      </div>
+      <div class="ab-zones" aria-label="Working across time zones">
+        <span class="small ab-zl">Working across time zones</span>
+        <div class="ab-zrow" id="abZones"></div>
       </div>
     </section>
 
@@ -1026,6 +1079,24 @@ function setTheme(light,animate){var h=document.documentElement;
 }
 applyLogos(THEME.t===1);
 $('themeBtn').addEventListener('click',function(){setTheme(!document.documentElement.classList.contains('light'),true);});
+
+// ---------------- about ----------------
+(function(){
+  var L=$('abLead');
+  if(L){var html='';[].forEach.call(L.childNodes,function(n){
+      if(n.nodeType===3){html+=n.textContent.split(/(\s+)/).map(function(w){return /\S/.test(w)?'<span class="w">'+esc(w)+'</span>':w;}).join('');}
+      else{html+='<em>'+n.textContent.split(/(\s+)/).map(function(w){return /\S/.test(w)?'<span class="w">'+esc(w)+'</span>':w;}).join('')+'</em>';}});
+    L.innerHTML=html;var ws=L.querySelectorAll('.w');
+    function upd(){if(reduce){return;}var r=L.getBoundingClientRect(),start=innerHeight*.85,end=innerHeight*.35;
+      var k=Math.max(0,Math.min(1,(start-r.top)/(start-end+r.height*.5)));var n=ws.length;
+      for(var i=0;i<n;i++){var t=Math.max(0,Math.min(1,k*n*1.15-i));ws[i].style.opacity=(.3+.7*t).toFixed(2);}}
+    addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();}
+  [].forEach.call(document.querySelectorAll('.ab-card'),function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px');});});
+  var Z=[['Pakistan','Asia/Karachi',1],['London','Europe/London'],['New York','America/New_York'],['Doha','Asia/Qatar'],['Dubai','Asia/Dubai']],row=$('abZones');
+  if(row){row.innerHTML=Z.map(function(z){return '<div class="ab-z'+(z[2]?' home':'')+'"><b data-tz="'+z[1]+'">--:--</b><span>'+z[0]+'</span></div>';}).join('');
+    function tk(){[].forEach.call(row.querySelectorAll('b'),function(b){try{b.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:b.dataset.tz}).format(new Date());}catch(e){}});}
+    tk();setInterval(tk,20000);}
+})();
 
 // ---------------- WebGL world ----------------
 (function(){
