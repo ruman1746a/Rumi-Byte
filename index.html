@@ -425,17 +425,13 @@ html.light .fx-word span{background:radial-gradient(260px 200px at var(--mx) var
 .ab-card .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);margin-bottom:8px}
 .ab-card svg{width:24px;height:24px}
 .ab-card b{font-weight:500;font-size:18px}
-.ab-card>span:last-child{font-size:14px;line-height:1.55;color:#a9a9b0}
-.ab-zones{margin-top:clamp(56px,7vw,90px);padding-top:22px;border-top:1px solid var(--line)}
-.ab-zl{display:block;margin-bottom:18px}
-.ab-zrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.ab-z{display:flex;flex-direction:column;gap:4px;min-width:0}
-.ab-z b{font-family:var(--display);font-weight:300;font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--fg)}
-.ab-z span{font-size:13px;color:var(--muted)}
-.ab-z.home b{font-weight:600}
-.ab-z.home span::after{content:" · Studio";color:var(--fg)}
-@media (max-width:900px){.ab-grid{grid-template-columns:minmax(0,1fr)}.ab-zrow{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}}
-@media (max-width:520px){.ab-cards{grid-template-columns:minmax(0,1fr)}.ab-zrow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ab-card{cursor:pointer}.ab-card>span:not(.ic){font-size:14px;line-height:1.55;color:#a9a9b0}
+.ab-more{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:8px;font-style:normal;font-size:13px;color:#F4F4F2;opacity:.6;transition:opacity .3s,gap .3s}
+.ab-more svg{width:14px;height:14px}
+.ab-card:hover .ab-more,.ab-card:focus-visible .ab-more{opacity:1;gap:12px}
+.ab-card:focus-visible{outline:1px solid rgba(255,255,255,.5);outline-offset:3px}
+@media (max-width:900px){.ab-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.ab-cards{grid-template-columns:minmax(0,1fr)}}
 html.light .ab-lead em{background:linear-gradient(180deg,#111114,#6b6b74);-webkit-background-clip:text;background-clip:text}
 html.light .ab-copy{color:var(--ink2)}
 html.light .ab-card{background:linear-gradient(160deg,#18181c,#0c0c0e);border-color:rgba(17,17,20,.2);box-shadow:0 20px 50px rgba(17,17,20,.12)}
@@ -545,9 +541,9 @@ html.light .ab-card{background:linear-gradient(160deg,#18181c,#0c0c0e);border-co
       <p class="dtag it" id="pTag"></p>
       <p class="lead it" id="pWhat"></p>
       <div class="pflow it" id="pFlow" aria-label="Steps"></div>
-      <div class="dsec it"><h3>What happens</h3><div class="dinc" id="pDo"></div></div>
-      <div class="dsec it"><h3>What we need from you</h3><ul class="dget" id="pNeed"></ul></div>
-      <div class="dsec it"><h3>What you get</h3><div class="dfor" id="pGet"></div></div>
+      <div class="dsec it"><h3 id="pH1">What happens</h3><div class="dinc" id="pDo"></div></div>
+      <div class="dsec it"><h3 id="pH2">What we need from you</h3><ul class="dget" id="pNeed"></ul></div>
+      <div class="dsec it"><h3 id="pH3">What you get</h3><div class="dfor" id="pGet"></div></div>
       <div class="dsec it"><h3>Good to know</h3><p class="dwhy" id="pTip"></p></div>
     </div>
     <div class="dfoot">
@@ -617,16 +613,13 @@ html.light .ab-card{background:linear-gradient(160deg,#18181c,#0c0c0e);border-co
           <a class="ab-link" href="#process">See how we work <b aria-hidden="true">→</b></a>
         </div>
         <ul class="ab-cards">
-          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="16" r="7.5"/><circle cx="20" cy="16" r="7.5"/></svg></span><b>One team, end to end</b><span>Brand, website and marketing from one studio, so nothing gets lost in hand-offs.</span></li>
-          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 24 13 16l5 4 9-11"/><path d="M20 9h7v7"/></svg></span><b>Designed for results</b><span>Every decision has a purpose: more trust, more enquiries and more sales.</span></li>
-          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 8h20v13H14l-6 5v-5H6Z"/><path d="M11 13h10M11 17h6"/></svg></span><b>Clear communication</b><span>Simple plans, regular updates and honest timelines. You always know what's next.</span></li>
-          <li class="ab-card"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3.2 3.2 4.6 7 4.6 11s-1.4 7.8-4.6 11c-3.2-3.2-4.6-7-4.6-11S12.8 8.2 16 5Z"/></svg></span><b>Global by design</b><span>Built to work with clients worldwide, wherever your business is based.</span></li>
+          <li class="ab-card" data-ab="0" role="button" tabindex="0"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="16" r="7.5"/><circle cx="20" cy="16" r="7.5"/></svg></span><b>One team, end to end</b><span>Brand, website and marketing from one studio, so nothing gets lost in hand-offs.</span><em class="ab-more">Read more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></em></li>
+          <li class="ab-card" data-ab="1" role="button" tabindex="0"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 24 13 16l5 4 9-11"/><path d="M20 9h7v7"/></svg></span><b>Designed for results</b><span>Every decision has a purpose: more trust, more enquiries and more sales.</span><em class="ab-more">Read more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></em></li>
+          <li class="ab-card" data-ab="2" role="button" tabindex="0"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 8h20v13H14l-6 5v-5H6Z"/><path d="M11 13h10M11 17h6"/></svg></span><b>Clear communication</b><span>Simple plans, regular updates and honest timelines. You always know what's next.</span><em class="ab-more">Read more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></em></li>
+          <li class="ab-card" data-ab="3" role="button" tabindex="0"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3.2 3.2 4.6 7 4.6 11s-1.4 7.8-4.6 11c-3.2-3.2-4.6-7-4.6-11S12.8 8.2 16 5Z"/></svg></span><b>Global by design</b><span>Built to work with clients worldwide, wherever your business is based.</span><em class="ab-more">Read more <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></em></li>
         </ul>
       </div>
-      <div class="ab-zones" aria-label="Working across time zones">
-        <span class="small ab-zl">Working across time zones</span>
-        <div class="ab-zrow" id="abZones"></div>
-      </div>
+      
     </section>
 
 
@@ -995,23 +988,51 @@ var PS=[
   get:['Live project','Results reports','Ongoing support'],
   tip:'Launch is not the end. The best results come from small improvements over time, and we’re here to help with those.'}
 ];
+var AB=[
+ {n:'One team, end to end',c:'#c0587a',h:'Brand, website and marketing, all under one roof.',
+  w:'Most businesses hire a designer, a developer and a marketer separately, then spend weeks getting them to agree. At Rumi Byte, one team plans and delivers everything, so your logo, website and ads feel like they belong to the same brand.',
+  d:[['One point of contact','You speak to one team that knows your whole project, not three freelancers.'],['Connected work','Your branding guides the website, and the website is built for your ads.'],['Consistent look','The same colours, fonts and voice across every page, post and campaign.'],['Faster delivery','No waiting on hand-offs between different people or agencies.']],
+  need:['Fewer meetings and fewer emails','No mixed messages between suppliers','A brand that looks the same everywhere','One team responsible for the result'],
+  get:['Branding','Websites','Ads & social'],
+  tip:'You can start with one service, like a logo, and add more later. Everything will still fit together.'},
+ {n:'Designed for results',c:'#5f9d5a',h:'Beautiful is good. Beautiful that sells is better.',
+  w:'Every design choice we make has a reason behind it. We think about who your customers are, what makes them trust a brand and what gets them to take the next step, whether that is calling you, booking or buying.',
+  d:[['Clear goals','We agree on what success looks like before we start, like more leads or sales.'],['Customer first','Layouts and messages are built around what your audience needs.'],['Easy to act','Clear buttons, simple forms and fast pages that guide people to contact you.'],['Measured','We track results so we can see what works and improve it.']],
+  need:['More trust from first-time visitors','More enquiries and sales','Ads that reach the right people','Decisions based on real data'],
+  get:['Conversion-focused design','Tracking & analytics','Results reports'],
+  tip:'A good-looking website that nobody contacts is not a success. We judge our work by what it does for your business.'},
+ {n:'Clear communication',c:'#3b8fb0',h:'You always know where your project stands.',
+  w:'Working with a studio should feel easy. We explain things in simple English, share progress regularly and give honest timelines, so there are no surprises, no confusing jargon and no chasing for updates.',
+  d:[['Simple plans','A clear outline of what we will do, when, and what it includes.'],['Regular updates','Progress shared at every stage, with previews you can see and click.'],['Honest timelines','Realistic deadlines, and we tell you early if anything changes.'],['Quick replies','Reach us on WhatsApp or email, and expect a prompt response.']],
+  need:['No guessing what happens next','Feedback that is easy to give','Plain language, no jargon','Peace of mind from start to finish'],
+  get:['Project plan','Progress previews','WhatsApp & email support'],
+  tip:'Have a question at any point? Just ask. There are no silly questions, and a quick message often saves days later.'},
+ {n:'Global by design',c:'#6a63c4',h:'Wherever you are, we work the way you do.',
+  w:'We work remotely with businesses in different countries, including the USA, UK and Qatar. We plan our calls around your time zone, write in clear English and build brands and websites that feel right for your market.',
+  d:[['Your time zone','Calls and updates are scheduled at times that suit you.'],['Clear English','All communication and content is written in professional English.'],['Local market','Design and messaging shaped for your customers and your culture.'],['Online workflow','Everything is shared online, so distance never slows the project down.']],
+  need:['A studio that works on your schedule','Work that fits your local market','Simple online collaboration','Easy contact on WhatsApp and email'],
+  get:['Remote collaboration','Flexible call times','Worldwide clients'],
+  tip:'Tell us your country and preferred contact times in your first message, and we will plan around you.'}
+];
+var P_L=PS,P_AB=false;
+var P_HD=[['What happens','What we need from you','What you get'],['How it works','What this means for you','Included']];
 var pEl=$('pdetail'),pCard=$('pCard'),P_I=0,pLast=null;
-function fillStep(k){var d=PS[k];P_I=k;
+function fillStep(k){var PS=P_L,d=PS[k];P_I=k;var hd=P_HD[P_AB?1:0];$('pH1').textContent=hd[0];$('pH2').textContent=hd[1];$('pH3').textContent=hd[2];
   pCard.style.setProperty('--acc',d.c);pCard.style.setProperty('--accD',d.c);
   var CHK='<svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9.2 8 11.6l4.6-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
-  $('pCount').textContent='Step '+pad(k+1)+' / '+pad(PS.length)+' · How we work';
+  $('pCount').textContent=(P_AB?'':'Step ')+pad(k+1)+' / '+pad(PS.length)+(P_AB?' · About Rumi Byte':' · How we work');
   $('pBig').textContent=pad(k+1);$('pTitle').textContent=d.n;$('pTag').textContent=d.h;$('pWhat').textContent=d.w;$('pTip').textContent=d.tip;
   $('pDo').innerHTML=d.d.map(function(x,j){return '<div><i>'+pad(j+1)+'</i><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
   $('pNeed').innerHTML=d.need.map(function(x){return '<li>'+CHK+'<span>'+esc(x)+'</span></li>';}).join('');
   $('pGet').innerHTML=d.get.map(function(x){return '<span>'+esc(x)+'</span>';}).join('');
-  $('pFlow').innerHTML=PS.map(function(x,j){return '<button type="button" class="'+(j===k?'on':'')+'" data-k="'+j+'" aria-label="Step '+(j+1)+': '+esc(x.n)+'"'+(j===k?' aria-current="step"':'')+'></button>';}).join('');
+  $('pFlow').innerHTML=PS.map(function(x,j){return '<button type="button" class="'+(j===k?'on':'')+'" data-k="'+j+'" aria-label="'+(P_AB?'':'Step ')+(j+1)+': '+esc(x.n)+'"'+(j===k?' aria-current="step"':'')+'></button>';}).join('');
   [].forEach.call($('pFlow').querySelectorAll('button'),function(b){b.addEventListener('click',function(){openStep(+b.dataset.k);});});
   $('pPrev').disabled=k<=0;$('pNext').disabled=k>=PS.length-1;
   $('pNextName').textContent=k<PS.length-1?'Next: '+PS[k+1].n:'';
   [].forEach.call(pCard.querySelectorAll('.it'),function(el,j){el.style.transitionDelay=(reduce?0:(.2+Math.min(j,6)*.06))+'s';});
   $('pScroll').scrollTop=0;
-  steps.forEach(function(o,j){o.classList.toggle('open',j===k);});}
-function openStep(k){k=Math.max(0,Math.min(PS.length-1,k));
+  if(!P_AB)steps.forEach(function(o,j){o.classList.toggle('open',j===k);});}
+function openStep(k,ab){if(ab!==undefined){P_AB=!!ab;P_L=P_AB?AB:PS;}k=Math.max(0,Math.min(P_L.length-1,k));
   var was=pEl.classList.contains('open');
   if(was){pEl.classList.remove('open');setTimeout(function(){fillStep(k);pEl.classList.add('open');},reduce?0:240);return;}
   pLast=document.activeElement;fillStep(k);
@@ -1019,8 +1040,10 @@ function openStep(k){k=Math.max(0,Math.min(PS.length-1,k));
   requestAnimationFrame(function(){pEl.classList.add('open');setTimeout(function(){$('pClose').focus({preventScroll:true});},60);});}
 function closeStep(){if(!pEl.classList.contains('open'))return;pEl.classList.remove('open');pEl.setAttribute('aria-hidden','true');
   document.documentElement.style.overflow='';if(pLast&&pLast.focus)try{pLast.focus({preventScroll:true});}catch(e){}}
-steps.forEach(function(st,k){st.addEventListener('click',function(){openStep(k);});
-  st.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openStep(k);}});});
+steps.forEach(function(st,k){st.addEventListener('click',function(){openStep(k,false);});
+  st.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openStep(k,false);}});});
+[].forEach.call(document.querySelectorAll('[data-ab]'),function(c){var k=+c.dataset.ab;c.addEventListener('click',function(){openStep(k,true);});
+  c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openStep(k,true);}});});
 $('pClose').addEventListener('click',closeStep);$('pShade').addEventListener('click',closeStep);
 $('pPrev').addEventListener('click',function(){openStep(P_I-1);});$('pNext').addEventListener('click',function(){openStep(P_I+1);});
 $('pCta').addEventListener('click',function(e){e.preventDefault();closeStep();setTimeout(function(){$('contact').scrollIntoView({behavior:reduce?'auto':'smooth'});},80);});
@@ -1032,7 +1055,7 @@ if(matchMedia('(pointer:fine)').matches&&!reduce){pEl.addEventListener('pointerm
   pCard.style.setProperty('--ry',(((e.clientX-(r.left+r.width/2))/innerWidth)*8).toFixed(2)+'deg');pCard.style.setProperty('--rx',(-((e.clientY-(r.top+r.height/2))/innerHeight)*6).toFixed(2)+'deg');});}
 // expertise items and skill chips open the matching service or step
 [].forEach.call(document.querySelectorAll('[data-svc]'),function(b){b.addEventListener('click',function(e){e.preventDefault();openFromList(+b.dataset.svc);});});
-[].forEach.call(document.querySelectorAll('[data-step]'),function(b){b.addEventListener('click',function(e){e.preventDefault();openStep(+b.dataset.step);});});
+[].forEach.call(document.querySelectorAll('[data-step]'),function(b){b.addEventListener('click',function(e){e.preventDefault();openStep(+b.dataset.step,false);});});
 
 
 // ---------------- contact ----------------
@@ -1092,10 +1115,6 @@ $('themeBtn').addEventListener('click',function(){setTheme(!document.documentEle
       for(var i=0;i<n;i++){var t=Math.max(0,Math.min(1,k*n*1.15-i));ws[i].style.opacity=(.3+.7*t).toFixed(2);}}
     addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();}
   [].forEach.call(document.querySelectorAll('.ab-card'),function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px');});});
-  var Z=[['Pakistan','Asia/Karachi',1],['London','Europe/London'],['New York','America/New_York'],['Doha','Asia/Qatar'],['Dubai','Asia/Dubai']],row=$('abZones');
-  if(row){row.innerHTML=Z.map(function(z){return '<div class="ab-z'+(z[2]?' home':'')+'"><b data-tz="'+z[1]+'">--:--</b><span>'+z[0]+'</span></div>';}).join('');
-    function tk(){[].forEach.call(row.querySelectorAll('b'),function(b){try{b.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:b.dataset.tz}).format(new Date());}catch(e){}});}
-    tk();setInterval(tk,20000);}
 })();
 
 // ---------------- WebGL world ----------------
