@@ -1,7 +1,7 @@
 /* Rumi Byte analytics: Google Analytics 4 with Consent Mode v2 and a cookie notice.
    To switch on, put the Measurement ID (G-XXXXXXXXXX) below. Empty = nothing loads. */
 (function () {
-  var GA_ID = '';
+  var GA_ID = 'G-57QFBTM8EJ';
   if (!GA_ID) return;
 
   var KEY = 'rb-consent';
