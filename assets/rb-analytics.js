@@ -40,7 +40,7 @@
   var form = document.getElementById('cxForm');
   if (form) form.addEventListener('submit', function () {
     var svc = document.getElementById('cSvc');
-    track('generate_lead', { service: svc ? svc.value : '' });
+    track('contact_form_submit', { service: svc ? svc.value : '' });
   });
 
   // cookie notice
