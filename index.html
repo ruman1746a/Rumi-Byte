@@ -462,6 +462,10 @@ html.light .ab-card{background:linear-gradient(160deg,#18181c,#0c0c0e);border-co
 .dpage svg{width:14px;height:14px}
 .dpage:hover{border-color:#fff;gap:14px}
 .sv-all{transition:color .3s}.sv-all:hover{color:var(--fg)}
+.dprice{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;margin:14px 0 0}
+.dprice span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8E8E93}
+.dprice b{font-weight:600;font-size:22px;color:#F4F4F2;font-variant-numeric:tabular-nums}
+.dprice em{font-style:normal;font-size:13px;color:#a9a9b0}
 /* faq */
 .fq{padding-top:clamp(70px,9vw,130px);padding-bottom:clamp(40px,5vw,70px)}
 .fq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:clamp(32px,6vw,110px);align-items:start}
@@ -568,6 +572,7 @@ html.light .fq-a p{color:var(--ink2)}
       <div class="dbig" id="dBig" aria-hidden="true">01</div>
       <h2 class="it" id="dTitle">Service</h2>
       <p class="dtag it" id="dTag"></p>
+      <p class="dprice it" id="dPrice" hidden></p>
       <p class="lead it" id="dWhat"></p>
       <div class="dsec it"><h3>Why it matters</h3><p class="dwhy" id="dWhy"></p></div>
       <div class="dsec it"><h3>What's included</h3><div class="dinc" id="dInc"></div></div>
@@ -957,7 +962,8 @@ var FOCUS={v:0,t:0,i:-1}, dEl=$('detail'), dCard=$('dCard'), lastFocus=null;
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 var ACC_L=['#6B4BD8','#D6336C','#1E8FA3','#3A3F55','#2F9E5B','#4F46E5','#2563EB','#E11D48','#B4610F','#0F8478','#8A6516','#8B3FD1'];
 var SLUG=["branding-and-logo-design", "graphic-design", "ui-ux-design", "website-development", "shopify-store-development", "ai-automation", "meta-ads-management", "tiktok-ads-management", "social-media-management", "seo-services", "content-writing", "video-editing"];
-function fillDetail(i){var s=SV[i],d=DT[i];$('dPage').href='/services/'+SLUG[i];
+var PRICE=[[50000, "one-time"], [10000, "per month"], null, [80000, "one-time"], [25000, "one-time"], [80000, "one-time"], [16500, "per month"], [16500, "per month"], [30000, "per month"], [35000, "per month"], [30000, "per month"], null];
+function fillDetail(i){var s=SV[i],d=DT[i];var pr=PRICE[i],pe=$('dPrice');if(pr){pe.innerHTML='<span>Starting from</span><b>PKR '+pr[0].toLocaleString('en-US')+'</b><em>'+pr[1]+((i===6||i===7)?' · ad budget separate':'')+'</em>';pe.hidden=false;}else{pe.hidden=true;}$('dPage').href='/services/'+SLUG[i];
   var CHK='<svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 9.2 8 11.6l4.6-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
   dCard.style.setProperty('--accD',s[3]);dCard.style.setProperty('--accL',ACC_L[i]);
   $('dCount').textContent=pad(i+1)+' / '+pad(N)+' · '+s[1];
