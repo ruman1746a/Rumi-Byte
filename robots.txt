@@ -23,4 +23,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://rumi-two.vercel.app/sitemap.xml
+Sitemap: https://rumibyte.com/sitemap.xml

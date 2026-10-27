@@ -2,7 +2,7 @@
 
 > Rumi Byte is a remote design and technology studio founded in 2026 by Umme Ruman. It helps businesses worldwide, including clients in the USA, UK, Qatar and the UAE, with branding, websites and digital marketing, delivered end to end by one team.
 
-- Website: https://rumi-two.vercel.app/
+- Website: https://rumibyte.com/
 - Email: rumibyte@gmail.com
 - WhatsApp: +92 303 7957116 (https://wa.me/923037957116)
 - Instagram: https://www.instagram.com/rumibyte/
@@ -13,11 +13,11 @@
 
 ## Services
 
-All services: https://rumi-two.vercel.app/services
+All services: https://rumibyte.com/services
 
 ### Branding & Identity (Design)
 
-Page: https://rumi-two.vercel.app/services/branding-and-logo-design
+Page: https://rumibyte.com/services/branding-and-logo-design
 
 Logos, color, type and brand guidelines so every touchpoint feels like the same company. Your brand is the first thing people judge. We build a complete visual identity that makes your business instantly recognisable, feel trustworthy, and look the same on every post, page and package.
 
@@ -26,7 +26,7 @@ Good for: New businesses, Rebrands, Personal brands, Startups.
 
 ### Graphic Design (Design)
 
-Page: https://rumi-two.vercel.app/services/graphic-design
+Page: https://rumibyte.com/services/graphic-design
 
 Social posts, ad creatives, flyers and marketing visuals made to stop the scroll. Eye-catching visuals for social media, ads and print. Every design is made to grab attention in the feed, communicate your message in seconds and stay true to your brand.
 
@@ -35,7 +35,7 @@ Good for: Small businesses, Online stores, Restaurants and cafes, Coaches and cr
 
 ### UI/UX Design (Design)
 
-Page: https://rumi-two.vercel.app/services/ui-ux-design
+Page: https://rumibyte.com/services/ui-ux-design
 
 Wireframes, user flows and polished screens for websites and apps that are easy to use. Clear, beautiful screens for websites and apps, designed around how your customers think and what they need to do. We plan the experience first, then make it look stunning.
 
@@ -44,7 +44,7 @@ Good for: App ideas, Website redesigns, Startups, SaaS products.
 
 ### Website Development (Build)
 
-Page: https://rumi-two.vercel.app/services/website-development
+Page: https://rumibyte.com/services/website-development
 
 Fast, mobile-first websites built to turn visitors into enquiries and sales. A fast, modern website that looks great on every phone and computer. It is built to explain what you do clearly, build trust, and turn visitors into enquiries and sales.
 
@@ -53,7 +53,7 @@ Good for: Service businesses, Portfolios, Agencies, Personal brands.
 
 ### Shopify Store (Build)
 
-Page: https://rumi-two.vercel.app/services/shopify-store-development
+Page: https://rumibyte.com/services/shopify-store-development
 
 Store setup, theme design and product pages ready to start selling. A ready-to-sell Shopify store set up so customers can browse, trust and buy from you easily. We handle the setup, design and details so you can focus on your products.
 
@@ -62,7 +62,7 @@ Good for: Clothing brands, Beauty and skincare, Home businesses, Instagram selle
 
 ### AI Automation (Build)
 
-Page: https://rumi-two.vercel.app/services/ai-automation
+Page: https://rumibyte.com/services/ai-automation
 
 Automating repetitive tasks like replies, lead capture and reporting. Smart automations that take care of repetitive tasks for you. From instant replies to organised leads and automatic reports, you save hours every week and never miss a customer.
 
@@ -71,7 +71,7 @@ Good for: Busy business owners, Service providers, Online stores, Growing teams.
 
 ### Meta Ads (Growth)
 
-Page: https://rumi-two.vercel.app/services/meta-ads-management
+Page: https://rumibyte.com/services/meta-ads-management
 
 Facebook and Instagram campaigns with clear targeting, creative testing and tracking. Facebook and Instagram ad campaigns that put your business in front of the people most likely to buy. We plan, create, launch and keep improving your ads so your budget works harder.
 
@@ -80,7 +80,7 @@ Good for: Online stores, Local businesses, Coaches and services, Product launche
 
 ### TikTok Ads (Growth)
 
-Page: https://rumi-two.vercel.app/services/tiktok-ads-management
+Page: https://rumibyte.com/services/tiktok-ads-management
 
 Short-form ad campaigns that build awareness with younger audiences. Short, native-feeling ad campaigns on TikTok that grow awareness and reach younger audiences. We plan ideas that feel like content, not ads, so people actually watch.
 
@@ -89,7 +89,7 @@ Good for: Fashion and beauty, Apps and products, Young audiences, Trend-driven b
 
 ### Social Media Management (Growth)
 
-Page: https://rumi-two.vercel.app/services/social-media-management
+Page: https://rumibyte.com/services/social-media-management
 
 Content calendars, posting and replies that keep your pages active. We run your social media so your pages stay active, consistent and engaging while you focus on running your business. Planned content, beautiful posts and real engagement, every month.
 
@@ -98,7 +98,7 @@ Good for: Busy business owners, Restaurants and shops, Clinics and services, Per
 
 ### SEO (Growth)
 
-Page: https://rumi-two.vercel.app/services/seo-services
+Page: https://rumibyte.com/services/seo-services
 
 On-page fixes, keywords and content that help your site get found on Google. We improve your website so it appears on Google when people search for what you offer. Better structure, faster pages and the right keywords bring visitors without paying for every click.
 
@@ -107,7 +107,7 @@ Good for: Local businesses, Service providers, Online stores, Blogs and websites
 
 ### Content Writing (Growth)
 
-Page: https://rumi-two.vercel.app/services/content-writing
+Page: https://rumibyte.com/services/content-writing
 
 Website copy, captions and blogs written for people first and search second. Clear, persuasive writing for your website, social media and blog. We write in your brand’s voice for people first and search engines second, so your message is understood and acted on.
 
@@ -116,7 +116,7 @@ Good for: New websites, Online stores, Coaches and experts, Businesses that hate
 
 ### Video Editing (Growth)
 
-Page: https://rumi-two.vercel.app/services/video-editing
+Page: https://rumibyte.com/services/video-editing
 
 Reels and short videos edited for social feeds and ad placements. Short videos and Reels edited to grab attention in the first seconds and keep people watching. Clean cuts, captions, music and effects that make your content look professional.
 
