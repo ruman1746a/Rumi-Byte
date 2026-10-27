@@ -100,8 +100,13 @@ img{display:block}
 @media (max-width:600px){.cards,.rels,.split{grid-template-columns:minmax(0,1fr)}.ft-grid{grid-template-columns:minmax(0,1fr)}.fq p{padding-right:0}.steps li{gap:16px}.steps .n{min-width:44px}.pill{padding:13px 20px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
-.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin:26px 0 0}
-.price b{font-weight:600;font-size:clamp(24px,2.6vw,30px);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-.price em{font-style:normal;font-size:14px;color:var(--muted)}
 .rel .from{font-size:13.5px;color:var(--ink2);margin-top:4px}
 .rel .from b{font-weight:600;color:var(--fg)}
+
+.price{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 32px;margin:28px 0 0}
+.price>.small{flex-basis:100%}
+.pr{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.pr b{font-weight:600;font-size:clamp(24px,2.6vw,30px);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.pr em{font-style:normal;font-size:14px;color:var(--muted)}
+.pr i{font-style:normal;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:3px 9px}
+.pnote{flex-basis:100%;font-size:13px;color:var(--muted)}
