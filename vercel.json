@@ -12,6 +12,17 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "rumi-two.vercel.app"
+        }
+      ],
+      "destination": "https://rumibyte.com/",
+      "statusCode": 301
+    },
+    {
       "source": "/:path*",
       "has": [
         {
