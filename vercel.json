@@ -20,7 +20,7 @@
         }
       ],
       "destination": "https://rumibyte.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/services/:slug.html",
