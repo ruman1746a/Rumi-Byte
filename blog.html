@@ -15,50 +15,63 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=4">
+<link rel="stylesheet" href="/assets/site.css?v=5">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Blog","@id":"https://rumibyte.com/blog#blog","url":"https://rumibyte.com/blog","name":"Rumi Byte Blog","description":"Practical guides on branding, websites, Shopify, ads and SEO for small businesses, written by the Rumi Byte team.","publisher":{"@type":["Organization","ProfessionalService"],"@id":"https://rumibyte.com/#org","name":"Rumi Byte","url":"https://rumibyte.com/","logo":"https://rumibyte.com/logo.png"},"inLanguage":"en","blogPost":[{"@type":"BlogPosting","headline":"How much does a logo design cost in 2026?","url":"https://rumibyte.com/blog/logo-design-cost","image":"https://rumibyte.com/assets/blog/logo-design-cost.jpg","datePublished":"2026-10-30","author":{"@id":"https://rumibyte.com/#founder"}},{"@type":"BlogPosting","headline":"Shopify vs WordPress: which is better for a small business?","url":"https://rumibyte.com/blog/shopify-vs-wordpress","image":"https://rumibyte.com/assets/blog/shopify-vs-wordpress.jpg","datePublished":"2026-10-30","author":{"@id":"https://rumibyte.com/#founder"}},{"@type":"BlogPosting","headline":"Meta Ads vs TikTok Ads: where should you spend your budget?","url":"https://rumibyte.com/blog/meta-ads-vs-tiktok-ads","image":"https://rumibyte.com/assets/blog/meta-ads-vs-tiktok-ads.jpg","datePublished":"2026-10-30","author":{"@id":"https://rumibyte.com/#founder"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rumibyte.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://rumibyte.com/blog"}]}]}</script>
 
 <style>
-.bw{position:relative;height:calc(100svh - 68px);min-height:520px;overflow:hidden;background:#050505;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-y}
-.bw.drag{cursor:grabbing}
-.bw-stage{position:absolute;inset:0;perspective:1500px;perspective-origin:50% 45%}
-.wcard{position:absolute;left:0;top:0;width:var(--cw);height:var(--ch);border-radius:16px;overflow:hidden;background:#111;will-change:transform;transform-origin:50% 50%;-webkit-user-drag:none}
-.wcard img{width:100%;height:100%;object-fit:cover;filter:brightness(.58) saturate(.92);transition:filter .45s,transform .9s cubic-bezier(.2,.7,.1,1);pointer-events:none}
-.wcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62));pointer-events:none}
-.wcard .wm{position:absolute;left:18px;right:16px;bottom:15px;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:14px;pointer-events:none}
-.wcard b{font-weight:500;font-size:clamp(16px,1.5vw,21px);line-height:1.18;letter-spacing:-.01em;color:#fff;max-width:17ch;text-shadow:0 2px 18px rgba(0,0,0,.5)}
-.wcard .tg{flex:none;text-align:right;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72)}
-.wcard .soon{position:absolute;top:14px;left:14px;z-index:1;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#ddd}
-.wcard.live .new{position:absolute;top:14px;left:14px;z-index:1;padding:5px 10px;border-radius:999px;background:#F4F4F2;color:#0b0b0d;font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
-.wcard:hover img{filter:brightness(1) saturate(1);transform:scale(1.035)}
-.wcard.soon-card:hover img{filter:brightness(.75)}
-.bw-vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 50%,transparent 45%,rgba(0,0,0,.72) 100%)}
-.bw-intro{position:absolute;left:clamp(16px,3vw,32px);top:clamp(16px,3vw,28px);z-index:3;max-width:min(440px,calc(100% - 32px));padding:20px 22px;border-radius:20px;background:rgba(10,10,12,.84);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(16px);cursor:auto;opacity:0;transform:translateY(10px);transition:opacity .8s,transform .8s}
-.bw.show .bw-intro{opacity:1;transform:none}
-.bw-intro h1{margin:10px 0 0;font-weight:400;font-size:clamp(26px,3vw,40px);line-height:1.05;letter-spacing:-.03em}
-.bw-intro h1 em{font-style:italic;font-weight:300;color:var(--ink2)}
-.bw-intro p{margin:10px 0 0;font-size:14px;color:var(--muted)}
-.bw-ctrl{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:3;transform:translateX(-50%);display:flex;gap:8px;cursor:auto}
-.bw-ctrl button,.bw-ctrl a{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(20,20,22,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#eee;font:500 13.5px var(--f);cursor:pointer;transition:background .3s,border-color .3s}
-.bw-ctrl button:hover,.bw-ctrl a:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3)}
-.bw-ctrl svg{width:14px;height:14px}
-.bw-cap{position:absolute;left:clamp(16px,3vw,32px);bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;align-items:center;gap:8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);pointer-events:none}
-.bw-cap i{font-style:normal;color:var(--acc)}
-.bw-hint{position:absolute;right:clamp(16px,3vw,32px);bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:3;font-size:12px;color:rgba(255,255,255,.55);pointer-events:none}
-@media (max-width:760px){.bw-cap,.bw-hint{display:none}.bw-intro{padding:16px 18px}.bw-intro p{display:none}.bw-ctrl{bottom:calc(16px + env(safe-area-inset-bottom,0px));gap:6px}.bw-ctrl button,.bw-ctrl a{padding:10px 14px;font-size:13px}}
+.bt{position:relative;background:#050505}
+.bt-v{position:sticky;top:68px;height:calc(100svh - 68px);overflow:hidden}
+.bt-cam{position:absolute;inset:0;perspective:900px;perspective-origin:50% 46%}
+.bt-world{position:absolute;left:50%;top:46%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.tc{position:absolute;left:0;top:0;width:var(--w);height:calc(var(--w)*.75);margin:calc(var(--w)*-.375) 0 0 calc(var(--w)*-.5);border-radius:18px;overflow:hidden;background:#111;box-shadow:0 40px 90px rgba(0,0,0,.6);transform-style:preserve-3d;will-change:transform,opacity;transition:box-shadow .5s}
+.tc img{width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(.9);transition:filter .5s,transform .9s cubic-bezier(.2,.7,.1,1)}
+.tc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.66));pointer-events:none}
+.tc.on img,.tc:hover img{filter:brightness(1) saturate(1)}
+.tc:hover img{transform:scale(1.03)}
+.tc .wm{position:absolute;left:20px;right:18px;bottom:16px;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.tc b{font-weight:500;font-size:clamp(16px,1.6vw,22px);line-height:1.18;letter-spacing:-.01em;color:#fff;max-width:18ch}
+.tc .tg{flex:none;text-align:right;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.tc .bdg{position:absolute;top:14px;left:14px;z-index:1;padding:5px 10px;border-radius:999px;font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.tc .bdg.new{background:#F4F4F2;color:#0b0b0d}
+.tc .bdg.soon{background:rgba(0,0,0,.5);color:#ddd;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.tp{position:absolute;left:0;top:0;border-radius:10px;background-size:cover;background-position:center;opacity:.28;filter:blur(1.5px) brightness(.7);will-change:transform,opacity}
+.bt-intro{position:absolute;left:0;right:0;top:50%;z-index:3;transform:translateY(-50%);text-align:center;padding:0 20px;pointer-events:none}
+.bt-intro .eyebrow{justify-content:center}
+.bt-intro h1{margin:16px auto 0;max-width:12ch;font-weight:400;font-size:clamp(44px,8vw,112px);line-height:.98;letter-spacing:-.045em;text-shadow:0 10px 60px rgba(0,0,0,.6)}
+.bt-intro h1 em{font-style:italic;font-weight:300;color:var(--ink2)}
+.bt-intro p{margin:20px auto 0;max-width:44ch;color:var(--ink2);font-size:clamp(15px,1.4vw,18px)}
+.bt-intro .sc{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(20,20,22,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13.5px;color:#ddd}
+.bt-intro .sc svg{width:14px;height:14px;animation:btb 1.8s ease-in-out infinite}
+@keyframes btb{50%{transform:translateY(4px)}}
+.bt-hud{position:absolute;left:clamp(16px,3vw,36px);right:clamp(16px,3vw,36px);bottom:calc(26px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;opacity:0;transition:opacity .5s;pointer-events:none}
+.bt.go .bt-hud{opacity:1}
+.bt-hud .ct{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.6)}
+.bt-hud .ti{display:block;margin-top:8px;max-width:22ch;font-size:clamp(20px,2.4vw,32px);line-height:1.15;letter-spacing:-.02em;color:#fff}
+.bt-hud a{pointer-events:auto}
+.bt-hud .rd{flex:none}
+.bt-prog{position:absolute;left:0;right:0;top:0;height:2px;z-index:4;background:rgba(255,255,255,.06)}
+.bt-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8a5cff,#E8C9A0)}
+.bt-vig{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(110% 85% at 50% 46%,transparent 50%,rgba(0,0,0,.75) 100%)}
+.bt.flat{height:auto!important}
+.bt.flat .bt-v{position:relative;top:0;height:auto;overflow:visible;padding:40px clamp(16px,4vw,40px)}
+.bt.flat .bt-cam,.bt.flat .bt-world{position:static;perspective:none;transform:none!important;width:auto;height:auto}
+.bt.flat .bt-world{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;max-width:1200px;margin:0 auto}
+.bt.flat .tc{position:relative;margin:0;width:auto;transform:none!important;opacity:1!important;height:auto;aspect-ratio:4/3}
+.bt.flat .tp,.bt.flat .bt-hud,.bt.flat .bt-prog,.bt.flat .bt-vig{display:none}
+.bt.flat .bt-intro{position:relative;top:0;transform:none;margin-bottom:40px;opacity:1!important}
+@media (max-width:640px){.bt-hud .rd{display:none}.bt-hud{pointer-events:auto}.tc .wm{left:14px;right:12px;bottom:12px}}
 .al{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .al li{border-bottom:1px solid var(--line)}
 .al a,.al .row{display:grid;grid-template-columns:56px 112px minmax(0,1fr) auto;align-items:center;gap:20px;padding:22px 4px}
 .al a:hover .t{color:#fff;transform:translateX(6px)}
 .al .n{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted)}
-.al img{width:112px;height:80px;object-fit:cover;border-radius:10px}
+.al img{width:112px;height:84px;object-fit:cover;border-radius:10px}
 .al .t{display:block;font-size:clamp(19px,2vw,26px);line-height:1.25;letter-spacing:-.01em;color:#e6e6ea;transition:color .3s,transform .4s}
 .al .m{display:block;margin-top:6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .al .go{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink2)}
 .al .go svg{width:14px;height:14px}
 .al .row{opacity:.5}
-@media (max-width:640px){.al a,.al .row{grid-template-columns:84px minmax(0,1fr);gap:14px}.al .n,.al .go{display:none}.al img{width:84px;height:64px}}
-@media (prefers-reduced-motion:reduce){.bw-intro{transition:none}}
+@media (max-width:640px){.al a,.al .row{grid-template-columns:84px minmax(0,1fr);gap:14px}.al .n,.al .go{display:none}.al img{width:84px;height:63px}}
 </style>
 </head>
 <body>
@@ -67,21 +80,22 @@
   <nav aria-label="Main"><a href="/services">Services</a><a href="/blog">Blog</a><a href="/#about">Studio</a><a class="pill sm" href="https://wa.me/923037957116" target="_blank" rel="noopener">Start a project</a></nav>
 </div></header>
 <main>
-<section class="bw" id="bw" aria-label="Blog articles wall">
-  <div class="bw-stage" id="bw-stage" aria-hidden="true"></div>
-  <div class="bw-vig"></div>
-  <div class="bw-intro">
-    <span class="eyebrow"><i></i>Rumi Byte Blog</span>
-    <h1>Notes on brands that <em>grow.</em></h1>
-    <p>Practical guides on branding, websites, ads and SEO for small business owners. Drag to explore.</p>
+<section class="bt" id="bt" aria-label="Blog articles">
+  <div class="bt-v">
+    <div class="bt-prog"><i id="btp"></i></div>
+    <div class="bt-cam"><div class="bt-world" id="btw"><a class="tc" href="/blog/logo-design-cost" data-title="How much does a logo design cost in 2026?" data-cat="Branding" data-live=1><img src="/assets/blog/logo-design-cost.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg new">New</span><span class="wm"><b>How much does a logo design cost in 2026?</b><span class="tg">Branding<br>4 min read</span></span></a><a class="tc" href="#all" data-title="What is a brand identity, really?" data-cat="Branding"><img src="/assets/blog/brand-identity.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg soon">Coming soon</span><span class="wm"><b>What is a brand identity, really?</b><span class="tg">Branding<br>Coming soon</span></span></a><a class="tc" href="/blog/shopify-vs-wordpress" data-title="Shopify vs WordPress: which is better for a small business?" data-cat="Websites" data-live=1><img src="/assets/blog/shopify-vs-wordpress.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg new">New</span><span class="wm"><b>Shopify vs WordPress: which is better for a small business?</b><span class="tg">Websites<br>4 min read</span></span></a><a class="tc" href="#all" data-title="How often should a small business post on Instagram?" data-cat="Social media"><img src="/assets/blog/social.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg soon">Coming soon</span><span class="wm"><b>How often should a small business post on Instagram?</b><span class="tg">Social media<br>Coming soon</span></span></a><a class="tc" href="/blog/meta-ads-vs-tiktok-ads" data-title="Meta Ads vs TikTok Ads: where should you spend your budget?" data-cat="Ads" data-live=1><img src="/assets/blog/meta-ads-vs-tiktok-ads.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg new">New</span><span class="wm"><b>Meta Ads vs TikTok Ads: where should you spend your budget?</b><span class="tg">Ads<br>4 min read</span></span></a><a class="tc" href="#all" data-title="SEO basics: getting your small business on Google" data-cat="SEO"><img src="/assets/blog/seo.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg soon">Coming soon</span><span class="wm"><b>SEO basics: getting your small business on Google</b><span class="tg">SEO<br>Coming soon</span></span></a><a class="tc" href="#all" data-title="5 tasks every small business can automate with AI" data-cat="AI automation"><img src="/assets/blog/ai.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg soon">Coming soon</span><span class="wm"><b>5 tasks every small business can automate with AI</b><span class="tg">AI automation<br>Coming soon</span></span></a><a class="tc" href="#all" data-title="Reels that sell: what makes a short video convert" data-cat="Video"><img src="/assets/blog/video.jpg" alt="" width="960" height="720" loading="eager" decoding="async"><span class="bdg soon">Coming soon</span><span class="wm"><b>Reels that sell: what makes a short video convert</b><span class="tg">Video<br>Coming soon</span></span></a></div></div>
+    <div class="bt-vig"></div>
+    <div class="bt-intro" id="bti">
+      <span class="eyebrow"><i></i>Rumi Byte Blog</span>
+      <h1>Notes on brands that <em>grow.</em></h1>
+      <p>Practical guides on branding, websites, ads and SEO for small business owners.</p>
+      <span class="sc">Scroll to explore <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
+    </div>
+    <div class="bt-hud" aria-live="polite"><div><span class="ct" id="btc"></span><span class="ti" id="btt"></span></div><a class="pill sm rd" id="btr" href="/blog/logo-design-cost">Read article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
   </div>
-  <span class="bw-cap"><i>✳</i> Notes on design &amp; growth · since 2026</span>
-  <div class="bw-ctrl"><button type="button" id="bwPrev" aria-label="Move wall back"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H4M7.5 4 3.5 8l4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Back</button><button type="button" id="bwNext" aria-label="Move wall forward">Continue<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button><a href="#all">All articles</a></div>
-  <span class="bw-hint">Drag to explore</span>
 </section>
-<script type="application/json" id="bw-data">[{"title": "How much does a logo design cost in 2026?", "cat": "Branding", "read": 4, "url": "/blog/logo-design-cost", "img": "/assets/blog/logo-design-cost.jpg"}, {"title": "Shopify vs WordPress: which is better for a small business?", "cat": "Websites", "read": 4, "url": "/blog/shopify-vs-wordpress", "img": "/assets/blog/shopify-vs-wordpress.jpg"}, {"title": "Meta Ads vs TikTok Ads: where should you spend your budget?", "cat": "Ads", "read": 4, "url": "/blog/meta-ads-vs-tiktok-ads", "img": "/assets/blog/meta-ads-vs-tiktok-ads.jpg"}, {"title": "What is a brand identity, really?", "cat": "Branding", "img": "/assets/blog/brand-identity.jpg"}, {"title": "How often should a small business post on Instagram?", "cat": "Social media", "img": "/assets/blog/social.jpg"}, {"title": "SEO basics: getting your small business on Google", "cat": "SEO", "img": "/assets/blog/seo.jpg"}, {"title": "5 tasks every small business can automate with AI", "cat": "AI automation", "img": "/assets/blog/ai.jpg"}, {"title": "Reels that sell: what makes a short video convert", "cat": "Video", "img": "/assets/blog/video.jpg"}]</script>
 <div class="wrap">
-  <section class="sec" id="all"><h2 class="lbl">All articles</h2><ul class="al"><li><a href="/blog/logo-design-cost"><span class="n">01</span><img src="/assets/blog/logo-design-cost.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">How much does a logo design cost in 2026?</span><span class="m">Branding · 4 min read</span></span><span class="go">Read <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></a></li><li><a href="/blog/shopify-vs-wordpress"><span class="n">02</span><img src="/assets/blog/shopify-vs-wordpress.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">Shopify vs WordPress: which is better for a small business?</span><span class="m">Websites · 4 min read</span></span><span class="go">Read <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></a></li><li><a href="/blog/meta-ads-vs-tiktok-ads"><span class="n">03</span><img src="/assets/blog/meta-ads-vs-tiktok-ads.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">Meta Ads vs TikTok Ads: where should you spend your budget?</span><span class="m">Ads · 4 min read</span></span><span class="go">Read <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></a></li><li><div class="row"><span class="n">04</span><img src="/assets/blog/brand-identity.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">What is a brand identity, really?</span><span class="m">Branding · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">05</span><img src="/assets/blog/social.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">How often should a small business post on Instagram?</span><span class="m">Social media · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">06</span><img src="/assets/blog/seo.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">SEO basics: getting your small business on Google</span><span class="m">SEO · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">07</span><img src="/assets/blog/ai.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">5 tasks every small business can automate with AI</span><span class="m">AI automation · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">08</span><img src="/assets/blog/video.jpg" alt="" width="112" height="80" loading="lazy"><span><span class="t">Reels that sell: what makes a short video convert</span><span class="m">Video · Coming soon</span></span><span class="go">Soon</span></div></li></ul></section>
+  <section class="sec" id="all"><h2 class="lbl">All articles</h2><ul class="al"><li><a href="/blog/logo-design-cost"><span class="n">01</span><img src="/assets/blog/logo-design-cost.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">How much does a logo design cost in 2026?</span><span class="m">Branding · 4 min read</span></span><span class="go">Read <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></a></li><li><a href="/blog/shopify-vs-wordpress"><span class="n">02</span><img src="/assets/blog/shopify-vs-wordpress.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">Shopify vs WordPress: which is better for a small business?</span><span class="m">Websites · 4 min read</span></span><span class="go">Read <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></a></li><li><a href="/blog/meta-ads-vs-tiktok-ads"><span class="n">03</span><img src="/assets/blog/meta-ads-vs-tiktok-ads.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">Meta Ads vs TikTok Ads: where should you spend your budget?</span><span class="m">Ads · 4 min read</span></span><span class="go">Read <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></a></li><li><div class="row"><span class="n">04</span><img src="/assets/blog/brand-identity.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">What is a brand identity, really?</span><span class="m">Branding · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">05</span><img src="/assets/blog/social.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">How often should a small business post on Instagram?</span><span class="m">Social media · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">06</span><img src="/assets/blog/seo.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">SEO basics: getting your small business on Google</span><span class="m">SEO · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">07</span><img src="/assets/blog/ai.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">5 tasks every small business can automate with AI</span><span class="m">AI automation · Coming soon</span></span><span class="go">Soon</span></div></li><li><div class="row"><span class="n">08</span><img src="/assets/blog/video.jpg" alt="" width="112" height="84" loading="lazy"><span><span class="t">Reels that sell: what makes a short video convert</span><span class="m">Video · Coming soon</span></span><span class="go">Soon</span></div></li></ul></section>
   <section class="band"><span class="eyebrow"><i></i>Let’s talk</span><h2>Rather have experts do it?</h2><p>Branding, websites and growth, handled end to end by one remote studio.</p><div class="ctas"><a class="pill" href="https://wa.me/923037957116" target="_blank" rel="noopener">Start on WhatsApp <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="pill ghost" href="/services">See all services</a></div></section>
 </div>
 </main>
@@ -95,46 +109,40 @@
 
 <script>
 (function(){
-var D=JSON.parse(document.getElementById('bw-data').textContent);
-var bw=document.getElementById('bw'),st=document.getElementById('bw-stage');
+var bt=document.getElementById('bt'),world=document.getElementById('btw'),intro=document.getElementById('bti'),bar=document.getElementById('btp');
+var hc=document.getElementById('btc'),ht=document.getElementById('btt'),hr=document.getElementById('btr');
+var cards=[].slice.call(world.querySelectorAll('.tc')),N=cards.length;
 var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var CW,CH,G=14,cols,rows,pool=[],px=0,py=0,vx=0,vy=0,drift=-.18,live=false,dragging=false,moved=0,lx,ly,hover=false;
-function dims(){var w=bw.clientWidth;CW=w<640?236:w<1100?320:400;CH=Math.round(CW*.89);bw.style.setProperty('--cw',CW+'px');bw.style.setProperty('--ch',CH+'px');}
-function idx(i,j){var n=D.length;return(((i*3+j*2)%n)+n)%n;}
-function fill(el,k){if(el._k===k)return;el._k=k;var d=D[k];el.href=d.url||'#all';el.className='wcard'+(d.url?' live':' soon-card');
- el.innerHTML='<img src="'+d.img+'" alt="" draggable="false" loading="eager">'+(d.url?'<span class="new">New</span>':'<span class="soon">Coming soon</span>')+'<span class="wm"><b>'+d.title+'</b><span class="tg">'+d.cat+'<br>'+(d.url?d.read+' min read':'Soon')+'</span></span>';}
-function build(){st.innerHTML='';pool=[];dims();var W=bw.clientWidth,H=bw.clientHeight;cols=Math.ceil(W/(CW+G))+3;rows=Math.ceil(H/(CH+G))+3;
- for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var a=document.createElement('a');a.tabIndex=-1;a.setAttribute('aria-hidden','true');a._c=c;a._r=r;a._k=-1;st.appendChild(a);pool.push(a);}
- px=(W-(CW+G)*cols)/2;py=-(CH+G)*0.35;}
-function pos(a){var sx=CW+G,sy=CH+G;var c0=Math.floor(-px/sx)-1,r0=Math.floor(-py/sy)-1;
- var gi=c0+((a._c-c0)%cols+cols)%cols;var off=(gi&1)?sy*.42:0;var gj0=Math.floor((-py-off)/sy)-1;var gj=gj0+((a._r-gj0)%rows+rows)%rows;
- fill(a,idx(gi,gj));return[gi*sx+px,gj*sy+py+off];}
-function layout(){for(var i=0;i<pool.length;i++){var a=pool[i],p=pos(a);a.style.transform='translate3d('+p[0].toFixed(1)+'px,'+p[1].toFixed(1)+'px,0)';}}
-function loop(){if(!dragging){px+=vx;py+=vy;vx*=.93;vy*=.93;if(!hover&&!RM&&Math.abs(vx)<.2)px+=drift;}layout();requestAnimationFrame(loop);}
-function intro(){var W=bw.clientWidth,H=bw.clientHeight;
- pool.forEach(function(a,i){var p=pos(a);var rx=(Math.sin(i*12.9898)*43758.5453)%1,ry=(Math.sin(i*78.233)*12345.678)%1;
-  var sx=W/2+(p[0]+CW/2-W/2)*1.8+rx*200,sy=H/2+(p[1]+CH/2-H/2)*1.6+ry*160,z=-600-Math.abs(rx)*1400;
-  a.style.transition='none';a.style.opacity='0';a.style.transform='translate3d('+(sx-CW/2).toFixed(0)+'px,'+(sy-CH/2).toFixed(0)+'px,'+z.toFixed(0)+'px) rotateX('+(ry*28).toFixed(1)+'deg) rotateY('+(rx*40).toFixed(1)+'deg) rotateZ('+(rx*14).toFixed(1)+'deg) scale(.62)';});
- requestAnimationFrame(function(){requestAnimationFrame(function(){
-  pool.forEach(function(a,i){var p=pos(a);var dx=p[0]+CW/2-W/2,dy=p[1]+CH/2-H/2,dd=Math.sqrt(dx*dx+dy*dy);
-   a.style.transition='opacity .9s ease '+(dd/2600).toFixed(2)+'s';a.style.opacity='1';});
-  setTimeout(function(){pool.forEach(function(a){var p=pos(a);var dx=p[0]+CW/2-W/2,dy=p[1]+CH/2-H/2,dd=Math.sqrt(dx*dx+dy*dy);
-   a.style.transition='transform 1.5s cubic-bezier(.2,.75,.1,1) '+(dd/3200).toFixed(2)+'s';a.style.transform='translate3d('+p[0].toFixed(1)+'px,'+p[1].toFixed(1)+'px,0)';});},900);
-  setTimeout(function(){pool.forEach(function(a){a.style.transition='';});live=true;bw.classList.add('ready');requestAnimationFrame(loop);},2900);
- });});}
-function start(){build();setTimeout(function(){bw.classList.add('show')},RM?0:1500);if(RM){layout();live=true;bw.classList.add('ready');requestAnimationFrame(loop);}else intro();}
-bw.addEventListener('pointerdown',function(e){if(!live||e.target.closest('.bw-ctrl,.bw-intro'))return;dragging=true;moved=0;lx=e.clientX;ly=e.clientY;vx=vy=0;bw.classList.add('drag');});
-window.addEventListener('pointermove',function(e){if(!dragging)return;var dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;moved+=Math.abs(dx)+Math.abs(dy);
- if(e.pointerType==='touch'&&Math.abs(dy)>Math.abs(dx))dy=0;px+=dx;py+=dy;vx=dx;vy=dy;});
-window.addEventListener('pointerup',function(){dragging=false;bw.classList.remove('drag');});
-window.addEventListener('pointercancel',function(){dragging=false;bw.classList.remove('drag');});
-bw.addEventListener('click',function(e){var a=e.target.closest('.wcard');if(!a)return;if(moved>6||a.getAttribute('href')==='#all'){e.preventDefault();if(moved<=6)document.getElementById('all').scrollIntoView({behavior:RM?'auto':'smooth'});}},true);
-bw.addEventListener('mouseover',function(e){hover=!!e.target.closest('.wcard')});
-bw.addEventListener('mouseleave',function(){hover=false});
-document.getElementById('bwPrev').addEventListener('click',function(){vx=(CW+G)*.075;});
-document.getElementById('bwNext').addEventListener('click',function(){vx=-(CW+G)*.075;});
-var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var ow=CW;dims();if(ow!==CW||true){build();layout();}},200);});
-start();
+if(RM){bt.classList.add('flat');return;}
+var Z0=900,GAP=1100,FOC=440,ZMAX,W,H,mx=0,my=0,tx=0,ty=0,cur=-1;
+function rnd(i){var x=Math.sin(i*91.7+3.1)*43758.5453;return x-Math.floor(x);}
+var parts=[];var imgs=cards.map(function(c){return c.querySelector('img').getAttribute('src');});
+for(var i=0;i<26;i++){var d=document.createElement('div');d.className='tp';d.style.backgroundImage='url('+imgs[i%imgs.length]+')';world.appendChild(d);parts.push(d);}
+function setup(){W=bt.querySelector('.bt-v').clientWidth;H=bt.querySelector('.bt-v').clientHeight;var mob=W<640;
+ var cw=mob?Math.min(W*.8,360):Math.min(Math.max(W*.4,400),620);FOC=mob?400:440;bt.style.setProperty('--w',cw+'px');
+ GAP=mob?1300:1150;ZMAX=Z0+(N-1)*GAP-FOC;bt.style.height=(N*85+110)+'vh';
+ cards.forEach(function(c,i){var s=i%2?1:-1;c._x=s*(mob?W*.08:Math.min(W*.2,300));c._y=(rnd(i)-.5)*(mob?80:140);c._z=-(Z0+i*GAP);c._ry=-s*(mob?6:16);c._rz=(rnd(i+7)-.5)*4;});
+ parts.forEach(function(p,i){var w=(mob?50:70)+rnd(i+40)*(mob?60:110);p.style.width=w+'px';p.style.height=(w*.75)+'px';
+  var ang=rnd(i+3)*6.283,rad=(mob?.55:.42)*W+rnd(i+9)*(mob?.2:.25)*W;p._x=Math.cos(ang)*rad;p._y=Math.sin(ang)*rad*.62;p._z=-(300+rnd(i+20)*(ZMAX+Z0+1200));});}
+function prog(){var r=bt.getBoundingClientRect();var tot=bt.offsetHeight-H;return Math.max(0,Math.min(1,-(r.top-68)/tot));}
+function op(eff){if(eff<-4200)return 0;if(eff<-3000)return (eff+4200)/1200;if(eff>-260)return Math.max(0,1-(eff+260)/320);return 1;}
+function frame(){var p=prog(),cam=p*ZMAX;var ia=Math.max(0,1-p*N*1.6),ci=1-ia*.86;tx+=(mx-tx)*.06;ty+=(my-ty)*.06;
+ world.style.transform='rotateY('+(tx*4).toFixed(2)+'deg) rotateX('+(-ty*3).toFixed(2)+'deg)';
+ var best=-1,bd=1e9;
+ cards.forEach(function(c,i){var eff=c._z+cam;var o=op(eff)*ci;c.style.opacity=o.toFixed(3);c.style.visibility=o<.01?'hidden':'visible';
+  var near=Math.max(0,Math.min(1,(eff+1400)/1000));
+  c.style.transform='translate3d('+c._x.toFixed(1)+'px,'+c._y.toFixed(1)+'px,'+eff.toFixed(1)+'px) rotateY('+(c._ry*(1-near*.6)).toFixed(2)+'deg) rotateZ('+c._rz.toFixed(2)+'deg)';
+  var dd=Math.abs(eff+FOC);if(eff<-200&&dd<bd){bd=dd;best=i;}});
+ parts.forEach(function(q){var eff=q._z+cam;var o=op(eff)*.3;q.style.opacity=o.toFixed(3);q.style.transform='translate3d('+q._x.toFixed(0)+'px,'+q._y.toFixed(0)+'px,'+eff.toFixed(0)+'px)';});
+ intro.style.opacity=ia.toFixed(3);intro.style.transform='translateY(calc(-50% - '+(p*N*120).toFixed(0)+'px))';
+ bt.classList.toggle('go',ia<.25);bar.style.width=(p*100).toFixed(2)+'%';
+ if(best!==cur&&best>=0){if(cur>=0)cards[cur].classList.remove('on');cards[best].classList.add('on');cur=best;var c=cards[best];
+  hc.textContent=('0'+(best+1)).slice(-2)+' / '+('0'+N).slice(-2)+' · '+c.dataset.cat;ht.textContent=c.dataset.title;
+  if(c.dataset.live){hr.style.display='';hr.href=c.getAttribute('href');}else{hr.style.display='none';}}
+ requestAnimationFrame(frame);}
+window.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;});
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(setup,150);});
+setup();requestAnimationFrame(frame);
 })();
 </script>
 <script src="/assets/rb-analytics.js?v=2" defer></script>

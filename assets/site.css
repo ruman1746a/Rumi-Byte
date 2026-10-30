@@ -144,6 +144,6 @@ img{display:block}
 .post-card b{font-size:22px;line-height:1.25}
 .post-card .small .dot{width:6px;height:6px}
 @media (max-width:600px){.post table.wide{min-width:520px}.post th,.post td{padding:11px 12px}.post table{font-size:13.5px}.rels.two{grid-template-columns:minmax(0,1fr)}.post .fq p{padding-right:0}.post p{font-size:17px}}
-.post-cover{margin:0 0 clamp(36px,4vw,52px);max-width:740px;aspect-ratio:16/10;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.post-cover{margin:0 0 clamp(36px,4vw,52px);max-width:740px;aspect-ratio:4/3;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
 .post-cover img{width:100%;height:100%;object-fit:cover}
 .post-hero+.post-cover+.post{border-top:0;padding-top:0}
