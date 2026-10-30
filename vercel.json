@@ -8,6 +8,14 @@
     {
       "source": "/services/:slug",
       "destination": "/services/:slug.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug.html"
     }
   ],
   "redirects": [
@@ -41,6 +49,16 @@
     {
       "source": "/services.html",
       "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug.html",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {

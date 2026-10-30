@@ -330,6 +330,7 @@ body.dopen #galHud,body.dopen #heroHud{opacity:0!important;visibility:hidden!imp
   background:radial-gradient(260px 200px at var(--mx) var(--my),rgba(255,255,255,1),rgba(230,232,236,.6) 35%,transparent 70%),linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.07) 90%);
   -webkit-background-clip:text;background-clip:text;padding:0 .04em .08em}
 .fx-bot{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:18px 24px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);background:var(--bg)}
+.fx-loc{font-size:11px;letter-spacing:.16em;text-transform:uppercase}
 .fx-top-link{display:inline-flex;align-items:center;gap:8px;color:#d8d8dc;transition:color .25s}
 .fx-top-link b{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;font-weight:400;transition:transform .3s,background .3s,color .3s}
 .fx-top-link:hover{color:#fff}
@@ -556,7 +557,7 @@ html.light .fq-a p{color:var(--ink2)}
   .links a.txt{padding-left:8px}
   .brand span{display:none}
   .links .wave{display:none}
-  #heroHud .side{display:none}
+  #heroHud .side{top:auto;transform:none;bottom:calc(92px + env(safe-area-inset-bottom,0px));font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#bdbdc3}
   #galHud .cta{display:none}
 }
 @media (prefers-reduced-motion:reduce){
@@ -782,12 +783,12 @@ html.light .fq-a p{color:var(--ink2)}
             <p>A design &amp; tech studio helping brands look sharp and grow online.</p>
             <span class="fx-time"><i aria-hidden="true"></i><span>Pakistan · <time id="fxTime">--:--</time> PKT</span></span>
           </div>
-          <nav aria-label="Explore"><h3>Explore</h3><a href="#services">Services</a><a href="#about">Studio</a><a href="#founder">Founder</a><a href="#process">How we work</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+          <nav aria-label="Explore"><h3>Explore</h3><a href="#services">Services</a><a href="#about">Studio</a><a href="#founder">Founder</a><a href="#process">How we work</a><a href="#faq">FAQ</a><a href="/blog">Blog</a><a href="#contact">Contact</a></nav>
           <nav aria-label="Services"><h3>Services</h3><a href="/services/branding-and-logo-design" data-svc="0">Branding</a><a href="/services/website-development" data-svc="3">Websites</a><a href="/services/ui-ux-design" data-svc="2">UI/UX design</a><a href="/services/meta-ads-management" data-svc="6">Meta ads</a><a href="/services/social-media-management" data-svc="8">Social media</a></nav>
           
         </div>
         <div class="fx-word" id="fxWord" aria-hidden="true"><span>Rumi Byte</span></div>
-        <div class="gut fx-bot"><span>© 2026 Rumi Byte. All rights reserved.</span><a href="#top" class="fx-top-link">Back to top <b aria-hidden="true">↑</b></a></div>
+        <div class="gut fx-bot"><span>© 2026 Rumi Byte. All rights reserved.</span><span class="fx-loc">Remote studio · Worldwide</span><a href="#top" class="fx-top-link">Back to top <b aria-hidden="true">↑</b></a></div>
       </footer>
     </div>
   </div>
