@@ -621,6 +621,24 @@ html.light .fz .chips button{border-color:rgba(255,255,255,.18);color:#e2e2e6}
 .fz.flat{height:auto}.fz.flat .fz-pin{position:relative;height:auto;padding:120px 16px}.fz.flat .fz-cam,.fz.flat .fz-grain,.fz.flat .fz-prog,.fz.flat .fz-tag,.fz.flat .fz-loc,.fz.flat .fz-path{display:none}
 .fz.flat .fz-ui{position:relative}.fz.flat .fz-id,.fz.flat .fz-state,.fz.flat .fz-cta{position:relative;left:auto;top:auto;bottom:auto;transform:none;opacity:1;visibility:visible;margin:0 auto 48px}
 .fz.flat .fz-state .lead .w{opacity:1}
+.hb-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.hb-head .eyebrow{display:block;margin-bottom:14px}
+.hb-head .sec-title em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400}
+.hb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:clamp(32px,4vw,52px)}
+.hb-card{position:relative;display:block;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#0b0b0d;border:1px solid rgba(255,255,255,.08);isolation:isolate}
+.hb-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(.8);transition:transform 1s cubic-bezier(.2,.7,.1,1),filter .5s}
+.hb-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.78));z-index:0}
+.hb-card:hover img{transform:scale(1.05);filter:brightness(1) saturate(1)}
+.hb-new{position:absolute;top:16px;left:16px;z-index:1;padding:5px 11px;border-radius:999px;background:#F4F4F2;color:#0b0b0d;font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.hb-meta{position:absolute;left:20px;right:20px;bottom:20px;z-index:1;display:flex;flex-direction:column;gap:10px;color:#fff}
+.hb-meta .tg{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.hb-meta b{font-family:var(--display);font-weight:500;font-size:clamp(19px,1.7vw,24px);line-height:1.2;letter-spacing:-.015em}
+.hb-meta .go{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:rgba(255,255,255,.75);transition:gap .3s,color .3s}
+.hb-card:hover .go{gap:14px;color:#fff}
+.hb-card:focus-visible{outline:2px solid var(--fg);outline-offset:4px}
+@media (max-width:900px){.hb-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(78vw,340px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}.hb-card{scroll-snap-align:start}}
+@media (max-width:560px){.links .nblog{display:none}}
+html.light .hb-card{border-color:rgba(17,17,20,.14)}
 #silkZone{position:relative;isolation:isolate}
 #silkZone>section{position:relative;z-index:1}
 #silkZone .silk-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:clip}
@@ -692,6 +710,7 @@ html.light #silkZone .silk-bg::after{background:linear-gradient(180deg,var(--bg)
       <svg class="wave" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6 Q6 0 11 6 T21 6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
       <a class="txt" id="navServices" href="#services"><span class="lg">Our services</span><span class="sm">Services</span></a>
       <a class="txt hide" id="navAbout" href="#about"><span class="lg">About us</span><span class="sm">About</span></a>
+      <a class="txt nblog" href="/blog">Blog</a>
       <button class="tbtn" id="themeBtn" type="button" aria-label="Switch to light theme" title="Switch theme">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
@@ -837,6 +856,14 @@ html.light #silkZone .silk-bg::after{background:linear-gradient(180deg,var(--bg)
         <div class="fq-head"><span class="small eyebrow">FAQ</span><h2 class="sec-title" id="fqTitle">Questions, answered.</h2><p>Everything clients usually ask before starting a project. Can’t find yours? <a href="#contact">Send us a message</a>.</p></div>
         <div class="fq-list"><details class="fq-i" open><summary><h3>What does Rumi Byte do?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Rumi Byte is a remote design and technology studio. We create brand identities, graphic design, UI/UX design, websites, Shopify stores and AI automations, and we grow brands with Meta ads, TikTok ads, social media management, SEO, content writing and video editing.</p></div></details><details class="fq-i"><summary><h3>Do you work with international clients?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Yes. We work remotely with businesses around the world, including the USA, the UK, Qatar, the UAE and Europe. We schedule calls around your time zone and communicate in clear, professional English.</p></div></details><details class="fq-i"><summary><h3>How much does a project cost?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Prices start from $25 per reel and $99 for a design pack, logos from $199, websites from $599 and monthly marketing from $299. In Pakistan, prices start from PKR 3,000. Each service page shows its starting price, and you get a clear, fixed quote after a free intro call, with no hidden costs.</p></div></details><details class="fq-i"><summary><h3>How long does it take to build a website?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>It depends on the size of the project. A brand identity or a small business website usually takes a few weeks, and you receive a clear timeline in your project plan before we start.</p></div></details><details class="fq-i"><summary><h3>Can you redesign my existing website or brand?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Yes. We can refresh your current logo and visuals, redesign your website for a modern, mobile-first experience, or rebuild it completely while keeping what already works.</p></div></details><details class="fq-i"><summary><h3>Will my website be mobile-friendly and SEO-ready?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Yes. Every website we build is responsive, fast and set up with on-page SEO basics such as clean structure, page titles, descriptions and structured data, so it is easier to find on Google and AI search tools.</p></div></details><details class="fq-i"><summary><h3>Do you offer support after launch?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Yes. After launch we can manage your ads, social media, SEO and content, track results and send you easy-to-read reports, so your brand keeps growing.</p></div></details><details class="fq-i"><summary><h3>How do I get started?</h3><span class="fq-x" aria-hidden="true"></span></summary><div class="fq-a"><p>Send us a message on WhatsApp at +92 303 7957116 or email rumibyte@gmail.com with a few details about your business. We will book a free intro call and suggest the best next step.</p></div></details></div>
       </div>
+    </section>
+
+    <section id="blog" class="gut hb" aria-labelledby="hbTitle">
+      <div class="hb-head">
+        <div><span class="small eyebrow">From the blog</span><h2 class="sec-title" id="hbTitle">Notes on brands that <em>grow.</em></h2></div>
+        <a class="pill ghost" href="/blog">All articles <b aria-hidden="true">→</b></a>
+      </div>
+      <div class="hb-grid"><a class="hb-card" href="/blog/logo-design-cost"><img src="/assets/blog/logo-design-cost.jpg" alt="" width="900" height="1125" loading="lazy" decoding="async"><span class="hb-new">New</span><span class="hb-meta"><span class="tg">Branding · 4 min read</span><b>How much does a logo design cost in 2026?</b><span class="go">Read article <i aria-hidden="true">→</i></span></span></a><a class="hb-card" href="/blog/shopify-vs-wordpress"><img src="/assets/blog/shopify-vs-wordpress.jpg" alt="" width="900" height="1125" loading="lazy" decoding="async"><span class="hb-new">New</span><span class="hb-meta"><span class="tg">Websites · 4 min read</span><b>Shopify vs WordPress: which is better for a small business?</b><span class="go">Read article <i aria-hidden="true">→</i></span></span></a><a class="hb-card" href="/blog/meta-ads-vs-tiktok-ads"><img src="/assets/blog/meta-ads-vs-tiktok-ads.jpg" alt="" width="900" height="1125" loading="lazy" decoding="async"><span class="hb-new">New</span><span class="hb-meta"><span class="tg">Ads · 4 min read</span><b>Meta Ads vs TikTok Ads: where should you spend your budget?</b><span class="go">Read article <i aria-hidden="true">→</i></span></span></a></div>
     </section>
 
     <div id="contact">
